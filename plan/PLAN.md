@@ -13,13 +13,13 @@
 Two recorded facts that are not a second knob:
 
 - The Mini is not reachable from this desk. This run has one counter, the desk node. [logs/MINI-NOT-REACHABLE.md](../logs/MINI-NOT-REACHABLE.md) is on origin before the arm. We do not write a Mini-armed file.
-- The other keys have no coin of at least 15 tKAS for a genesis, so every family's genesis coin comes from the sender key. Keys 1 and 2 are not used. That key has 2,316 coins of at least 15 tKAS.
+- The hash tool requires one distinct key per family. Keys 1 and 2 are not used. The sender key is family 1. Twelve other keys had no coin of at least 15 tKAS, so each receives 20 tKAS from the sender key before the hashes are built. The mint key already had coins and is not one of the twelve.
 
 ## Order
 
 1. Disk floor written. Desk free space at 2026-11-14T11:18:39Z: 340.2 GB. Abort under 150 GB. The desk node is not restarted.
 2. Free check, read-only, before the open. This run does not send to a public node.
-3. Funding already on the sender key. No new move from the mining wallet. The runner's `BUDGET_CHECK` still runs before genesis and holds the run if the projected end is under 18,000 plus the 8,000 margin.
+3. No new move from the mining wallet. Twelve family keys each receive 20 tKAS from the sender key (240 tKAS plus fees), logged, before the hashes. The runner's `BUDGET_CHECK` still runs before genesis and holds the run if the projected end is under 18,000 plus the 8,000 margin.
 4. Hashes first. Thirteen rows in [hashes/SIXTEEN.md](../hashes/README.md) (the file keeps that name). The offline check builds them and does not submit.
 5. `PRE-RUN-OPEN`, then genesis of the thirteen covenants, then the twelve families, the mint line and one guest match.
 

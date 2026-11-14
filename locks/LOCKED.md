@@ -9,6 +9,6 @@ Locked before the first submit.
 - With them, unchanged from pre-run 25: the mint line, cap 30, one at a time; one tic-tac-toe match, one carrier at a time.
 - No heavy lane. No payment flood. No public send.
 - One counter: the desk node. The Mini is not reachable. No Mini-armed file.
-- Keys 1 and 2 are not used. Genesis coins come from the sender key.
+- Keys 1 and 2 are not used. One distinct key per family. Twelve keys are funded with 20 tKAS each from the sender key before the hashes are built.
 - Disk line: abort if the desk is under 150 GB free. It was 340.2 GB at 2026-11-14T11:18:39Z.
 - A miss is a retry with the fix written first. This page is not rewritten to match the result.
